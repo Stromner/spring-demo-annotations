@@ -10,4 +10,9 @@ public class SwimCoach implements Coach {
 		return "SwimCoach: 5 laps of breast stroke, 2 laps of mixed";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
