@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 	
+	@Autowired
 	private FortuneService fortuneService;
 	
 	/*@Autowired // Will look for a class that implements the FortuneService interface
@@ -19,11 +20,12 @@ public class TennisCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}*/
 	
+	/*
 	@Autowired
 	public void notASetterMethod(FortuneService fortuneService) {
 		System.out.println(">>TennisCoach: Inside notASetterMethod");
 		this.fortuneService = fortuneService;
-	}
+	}*/
 	
 	@Override
 	public String getDailyWorkout() {
