@@ -13,9 +13,15 @@ public class TennisCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}*/
 	
-	@Autowired
+	/*@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
 		System.out.println(">>TennisCoach: Inside setFortuneService");
+		this.fortuneService = fortuneService;
+	}*/
+	
+	@Autowired
+	public void notASetterMethod(FortuneService fortuneService) {
+		System.out.println(">>TennisCoach: Inside notASetterMethod");
 		this.fortuneService = fortuneService;
 	}
 	
