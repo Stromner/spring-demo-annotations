@@ -1,16 +1,19 @@
 package com.luv2code.springdemo;
 
-import java.time.Instant;
+import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RandomFortuneService implements FortuneService{
-	private String[] fortunes = {"Fortune1", "Fortune2", "Fortune3"};
+	@Value("${fortunes.test}")
+	private String[] fortunes;
 	
 	@Override
 	public String getFortune() {
-		return fortunes[Instant.now().getNano()%fortunes.length];
+		Random random = new Random();
+		return fortunes[random.nextInt(fortunes.length)];
 	}
 
 }
