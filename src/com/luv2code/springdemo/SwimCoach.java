@@ -1,9 +1,15 @@
 package com.luv2code.springdemo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SwimCoach implements Coach {
+	@Value("${foo.email}")
+	private String email;
+	
+	@Value("${foo.team}")
+	private String team;
 
 	@Override
 	public String getDailyWorkout() {
@@ -14,5 +20,9 @@ public class SwimCoach implements Coach {
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public String getPrivateData() {
+		return "SwimCoach: email="+email+"\tteam="+team;
 	}
 }
