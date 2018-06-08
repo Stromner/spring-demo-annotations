@@ -5,11 +5,9 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	@Autowired
@@ -18,12 +16,12 @@ public class TennisCoach implements Coach {
 	
 	@PostConstruct
 	public void postInit() {
-		System.out.println("Custom post init method running");
+		System.out.println(">>TennishCoach inside postInit");
 	}
 	
 	@PreDestroy
 	public void preDestroy() {
-		System.out.println("Custom pre destroy method running");
+		System.out.println(">>TennisCoach inside preDestroy");
 	}
 	
 	/*@Autowired // Will look for a class that implements the FortuneService interface

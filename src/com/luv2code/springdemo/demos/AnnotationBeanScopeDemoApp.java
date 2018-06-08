@@ -19,5 +19,6 @@ public class AnnotationBeanScopeDemoApp {
 		System.out.println("theCoach==theBadCoach? " + (theCoach==theBadCoach));
 		
 		// close context file
+		context.close();
 	}
 }
