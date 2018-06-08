@@ -8,8 +8,14 @@ public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
-	@Autowired // Will look for a class that implements the FortuneService interface
+	/*@Autowired // Will look for a class that implements the FortuneService interface
 	public TennisCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}*/
+	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println(">>TennisCoach: Inside setFortuneService");
 		this.fortuneService = fortuneService;
 	}
 	
