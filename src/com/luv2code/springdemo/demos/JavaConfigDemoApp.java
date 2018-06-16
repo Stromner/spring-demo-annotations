@@ -11,7 +11,7 @@ public class JavaConfigDemoApp {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class); 
 		
 		// Get the bean from Spring container
-		Coach theCoach = context.getBean("tennisCoach", Coach.class);
+		Coach theCoach = context.getBean("bowlingCoach", Coach.class);
 		
 		// Call methods on the beans
 		System.out.println(theCoach.getDailyWorkout());
